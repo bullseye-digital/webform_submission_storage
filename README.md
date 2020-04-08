@@ -14,4 +14,4 @@ Store webform submission to entity or custom table
 * Enter entity machine name or DB table name
 * Configure fields mapping, see screenshot below:
 
-
+![Webform mapping settings](https://github.com/bullseye-digital/webform_submission_storage/raw/master/webform-settings.jpg)
