@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains webform_submission_storage.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webform_submission_storage_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webform_submission_storage module.
+    case 'help.page.webform_submission_storage':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Store webform submission to entity or custom table') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function webform_submission_storage_theme() {
+  return [
+    'webform_handler_webform_submission_storage_summary' => [
+      'variables' => ['settings' => NULL, 'handler' => NULL],
+      'template' => 'webform-submission-storage-summary',
+    ],
+  ];
+}

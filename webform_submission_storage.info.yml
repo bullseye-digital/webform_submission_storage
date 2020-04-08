@@ -1,0 +1,7 @@
+name: 'Webform Submission Storage'
+type: module
+description: 'Store webform submission to entity or custom table'
+core: 8.x
+package: 'Ogilvy'
+dependencies:
+  - webform

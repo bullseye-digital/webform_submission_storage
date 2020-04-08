@@ -1,0 +1,22 @@
+
+{
+    "name": "bullseye-digital/webform_submission_storage",
+    "description": "Store webform submission to entity or custom table",
+    "type": "drupal-module",
+    "license": "GPL-2.0+",
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "platform": {
+            "php": "7.1"
+        },
+        "process-timeout": 0,
+        "sort-packages": true
+    }
+}
