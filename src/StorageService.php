@@ -54,7 +54,7 @@ class StorageService implements StorageServiceInterface {
    *   Return entity id if success.
    */
   public function storageSubmitEntity(array $config, array $data) {
-    // Currently only support string, you can add 
+    // Currently only support string, you can add
     // other type support by override this method.
     $entity = entity_create($config['storage_key']);
 

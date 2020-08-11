@@ -25,7 +25,6 @@ use Drupal\Component\Serialization\Json;
  *   description = @Translation("Save submission to custom entity or custom table"),
  *   cardinality = \Drupal\webform\Plugin\WebformHandlerInterface::CARDINALITY_SINGLE,
  *   results = \Drupal\webform\Plugin\WebformHandlerInterface::RESULTS_IGNORED,
- *   submission = \Drupal\webform\Plugin\WebformHandlerInterface::SUBMISSION_REQUIRED,
  * )
  */
 class SubmissionStorageHandler extends WebformHandlerBase {

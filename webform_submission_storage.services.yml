@@ -3,5 +3,5 @@ services:
     parent: logger.channel_base
     arguments: ['webform_submission_storage']
   webform_submission_storage.storage_service:
-    class: Drupal\webform_submission_storage\StorageSerVice
+    class: Drupal\webform_submission_storage\StorageService
     arguments: ['@entity.manager', '@database', '@logger.factory']
