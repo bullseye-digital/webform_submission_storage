@@ -2,10 +2,11 @@
 
 namespace Drupal\webform_submission_storage;
 
-use Drupal\Core\Entity\EntityManagerInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Database\Driver\mysql\Connection;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\Entity\EntityStorageException;
+use Drupal\Core\Entity;
 
 /**
  * Class StorageService.
@@ -36,7 +37,7 @@ class StorageService implements StorageServiceInterface {
   /**
    * Constructs a new StorageSerVice object.
    */
-  public function __construct(EntityManagerInterface $entity_manager, Connection $database, LoggerChannelFactoryInterface $logger_factory) {
+  public function __construct(EntityTypeManagerInterface $entity_manager, Connection $database, LoggerChannelFactoryInterface $logger_factory) {
     $this->entityManager = $entity_manager;
     $this->database = $database;
     $this->loggerFactory = $logger_factory;
@@ -56,7 +57,7 @@ class StorageService implements StorageServiceInterface {
   public function storageSubmitEntity(array $config, array $data) {
     // Currently only support string, you can add
     // other type support by override this method.
-    $entity = entity_create($config['storage_key']);
+    $entity = Entity::create($config['storage_key']);
 
     // Loop field key with value.
     foreach ($data as $key => $value) {
